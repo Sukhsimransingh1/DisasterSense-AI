@@ -52,10 +52,13 @@ export default function ReportIncident() {
       const formData = new FormData();
       formData.append("file", image);
 
-      const response = await fetch("http://127.0.0.1:8000/uploads/", {
-        method: "POST",
-        body: formData,
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/uploads/`,
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       const data = await response.json();
       console.log(data);

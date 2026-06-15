@@ -44,3 +44,5 @@ uploads/
 *.tmp
 
 *.bak
+app/faiss_index/knowledge.index
+app/faiss_index/chunks.pkl

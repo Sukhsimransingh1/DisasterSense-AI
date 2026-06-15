@@ -98,7 +98,7 @@ Interactive dashboard displaying:
 
 # 🏗️ System Architecture
 
-```text
+
                     +----------------------+
                     |     React Frontend   |
                     +----------+-----------+
@@ -124,7 +124,7 @@ Interactive dashboard displaying:
                                                     |
                                                     ▼
                                          AI Emergency Response
-```
+
 
 ---
 
@@ -165,7 +165,7 @@ Interactive dashboard displaying:
 
 # 📂 Project Structure
 
-```text
+
 backend/
 │
 ├── app/
@@ -190,9 +190,9 @@ frontend/
 │   ├── services/
 │   ├── hooks/
 │   └── assets/
-```
 
----
+
+
 
 # ⚙️ Installation
 
