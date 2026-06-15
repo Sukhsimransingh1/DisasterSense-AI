@@ -27,7 +27,7 @@ export default function Sidebar() {
           <div className="w-10 h-10 rounded-lg bg-red-600 flex items-center justify-center">
             <FaShieldAlt className="text-white" />
           </div>
-          <h1 className="text-xl font-bold">Sentinel AI</h1>
+          <h1 className="text-xl font-bold">DisasterSense AI</h1>
         </div>
         <p className="text-slate-400 text-sm">Emergency Intelligence</p>
       </div>

@@ -22,7 +22,7 @@ export default function Navbar({ title }: Props) {
           <FaShieldAlt className="text-white text-sm" />
         </div>
         <h2 className="text-xl font-semibold">
-          {title || "Sentinel AI"}
+          {title || "DisasterSense AI"}
         </h2>
       </div>
       <div className="flex items-center gap-4">

@@ -55,7 +55,7 @@ export default function Login() {
           <div className="w-20 h-20 bg-gradient-to-br from-red-600 to-cyan-600 rounded-2xl flex items-center justify-center mb-8">
             <FaShieldAlt className="text-4xl" />
           </div>
-          <h1 className="text-4xl font-bold mb-4">Sentinel AI</h1>
+          <h1 className="text-4xl font-bold mb-4">DisasterSense AI</h1>
           <p className="text-xl text-slate-400 mb-8">
             AI-powered disaster intelligence platform for emergency preparedness and response
           </p>
@@ -96,7 +96,7 @@ export default function Login() {
                 {isLogin ? "Welcome Back" : "Create Account"}
               </h2>
               <p className="text-slate-400">
-                {isLogin ? "Sign in to your account" : "Get started with Sentinel AI"}
+                {isLogin ? "Sign in to your account" : "Get started with DisasterSense AI"}
               </p>
             </div>
 

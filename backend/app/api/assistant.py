@@ -35,35 +35,13 @@ async def ask_assistant(
 
     answer = await get_emergency_response(
 
-    question=question,
-
-    image=image,
-
-    db=db,
-
-)
-
-    chat = Chat(
-
-        user_id=1,
-
         question=question,
 
-        answer=answer,
+        image=image,
 
-        image_path=(
-            image.filename
-            if image
-            else None
-        ),
+        db=db,
 
     )
-
-    db.add(chat)
-
-    db.commit()
-
-    db.refresh(chat)
 
     return {
 

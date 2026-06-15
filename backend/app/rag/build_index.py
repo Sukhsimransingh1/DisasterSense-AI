@@ -16,22 +16,19 @@ os.makedirs(
     exist_ok=True
 
 )
-def chunk_text(text: str, chunk_size: int = 400):
-    chunks = []
+def chunk_text(text: str):
 
-    start = 0
+    paragraphs = [
 
-    while start < len(text):
+        p.strip()
 
-        end = start + chunk_size
+        for p in text.split("\n\n")
 
-        chunks.append(
-            text[start:end]
-        )
+        if p.strip()
 
-        start = end
+    ]
 
-    return chunks
+    return paragraphs
 
 
 

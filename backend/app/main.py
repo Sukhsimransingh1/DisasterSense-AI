@@ -11,7 +11,7 @@ from app.api.assistant import (
     router as assistant_router
 )
 app = FastAPI(
-    title="Sentinel AI API"
+    title="DisasterSense AI API"
 )
 
 app.add_middleware(
@@ -40,5 +40,5 @@ app.include_router(
 @app.get("/")
 def root():
     return {
-        "message": "Sentinel AI Backend Running"
+        "message": "DisasterSense AI Backend Running"
     }

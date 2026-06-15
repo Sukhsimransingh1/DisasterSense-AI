@@ -15,7 +15,6 @@ import {
   FaSearch,
   FaDatabase as FaDb,
   FaRocket,
-  FaPhone,
   FaShieldAlt,
   FaBolt
 } from "react-icons/fa";
@@ -55,13 +54,13 @@ export default function LandingPage() {
             <div className="w-10 h-10 rounded-lg bg-red-600 flex items-center justify-center">
               <FaShieldAlt className="text-white" />
             </div>
-            <span className="text-xl font-bold">Sentinel AI</span>
+            <span className="text-xl font-bold">DisasterSense AI</span>
           </div>
           <div className="hidden md:flex items-center gap-8">
             <a href="#features" className="text-slate-300 hover:text-white transition-colors">Features</a>
             <a href="#how-it-works" className="text-slate-300 hover:text-white transition-colors">How It Works</a>
             <a href="#tech" className="text-slate-300 hover:text-white transition-colors">Tech</a>
-            <Link to="/login" className="bg-slate-800 px-4 py-2 rounded-lg hover:bg-slate-700 transition-colors">Login</Link>
+            
             <Link to="/login" className="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg transition-colors">Get Started</Link>
           </div>
         </div>
@@ -77,15 +76,15 @@ export default function LandingPage() {
               transition={{ duration: 0.6 }}
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-800/50 rounded-full border border-slate-700 mb-6">
-                <FaBolt className="text-amber-500" />
-                <span className="text-sm text-slate-300">AI-Powered Disaster Management Platform</span>
-              </div>
-              <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
-                AI-Powered Disaster Intelligence Platform
-              </h1>
-              <p className="text-xl text-slate-400 mb-8">
-                AI Assistant, Disaster Analytics, Incident Reporting, Image Analysis, and Emergency Guidance all in one platform.
-              </p>
+              <FaBolt className="text-amber-500" />
+              <span className="text-sm text-slate-300">AI-Powered Disaster Intelligence & Emergency Response Platform</span>
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
+              AI-Powered Disaster Intelligence & Emergency Response Platform
+            </h1>
+            <p className="text-xl text-slate-400 mb-8">
+              AI Assistant, Disaster Analytics, Incident Reporting, Image Analysis, and Emergency Guidance all in one platform.
+            </p>
               <div className="flex flex-wrap gap-4">
                 <Link to="/login" className="bg-red-600 hover:bg-red-700 px-8 py-4 rounded-xl font-semibold text-lg transition-colors flex items-center gap-2">
                   Get Started <FaChevronRight />
@@ -102,13 +101,105 @@ export default function LandingPage() {
               className="relative"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-cyan-500/20 rounded-3xl blur-3xl"></div>
-              <div className="relative bg-slate-900 border border-slate-800 rounded-3xl p-8 shadow-2xl">
-                <div className="aspect-video bg-slate-800 rounded-2xl flex items-center justify-center border border-slate-700">
-                  <div className="text-center">
-                    <FaRobot className="text-6xl text-cyan-500 mx-auto mb-4" />
-                    <p className="text-slate-400">Emergency Operations Interface</p>
+              <div className="relative bg-[#0B1D33] border border-slate-700/50 rounded-3xl p-6 shadow-2xl overflow-hidden">
+                {/* Dashboard Container */}
+                <div className="aspect-video grid grid-cols-12 gap-4">
+                  {/* Map Section */}
+                  <div className="col-span-8 bg-[#071226] rounded-2xl border border-slate-700/50 p-4 relative overflow-hidden">
+                    <div className="absolute inset-0 opacity-30">
+                      {/* Map Grid */}
+                      <div className="absolute inset-0" style={{ 
+                        backgroundImage: `
+                          linear-gradient(to right, #334155 1px, transparent 1px),
+                          linear-gradient(to bottom, #334155 1px, transparent 1px)
+                        `,
+                        backgroundSize: '20px 20px'
+                      }}></div>
+                    </div>
+                    {/* Map Markers */}
+                    <div className="absolute top-1/4 left-1/4 animate-pulse">
+                      <div className="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center shadow-lg shadow-red-500/50">
+                        <span className="text-xs">🔥</span>
+                      </div>
+                    </div>
+                    <div className="absolute top-1/2 right-1/3 animate-pulse" style={{ animationDelay: '0.5s' }}>
+                      <div className="w-8 h-8 rounded-full bg-cyan-600 flex items-center justify-center shadow-lg shadow-cyan-500/50">
+                        <span className="text-xs">🌊</span>
+                      </div>
+                    </div>
+                    <div className="absolute bottom-1/4 left-1/2 animate-pulse" style={{ animationDelay: '1s' }}>
+                      <div className="w-8 h-8 rounded-full bg-amber-600 flex items-center justify-center shadow-lg shadow-amber-500/50">
+                        <span className="text-xs">🌍</span>
+                      </div>
+                    </div>
+                    <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-[#071226] to-transparent"></div>
+                    <div className="absolute top-2 left-2 bg-slate-900/80 backdrop-blur px-3 py-1 rounded-full border border-slate-700">
+                      <span className="text-xs text-slate-300">Disaster Map</span>
+                    </div>
+                  </div>
+                  {/* Analytics & Chat Sidebar */}
+                  <div className="col-span-4 flex flex-col gap-4">
+                    {/* Analytics Cards */}
+                    <div className="grid grid-rows-3 gap-3">
+                      <div className="bg-slate-800/70 backdrop-blur border border-slate-700/50 rounded-xl p-3 hover:border-cyan-500/50 transition-all">
+                        <div className="text-xs text-slate-400 mb-1">Active Incidents</div>
+                        <div className="flex items-end justify-between">
+                          <div className="text-2xl font-bold text-cyan-500">12</div>
+                          <div className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></div>
+                        </div>
+                      </div>
+                      <div className="bg-slate-800/70 backdrop-blur border border-slate-700/50 rounded-xl p-3 hover:border-amber-500/50 transition-all">
+                        <div className="text-xs text-slate-400 mb-1">AI Alerts</div>
+                        <div className="flex items-end justify-between">
+                          <div className="text-2xl font-bold text-amber-500">8</div>
+                          <div className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></div>
+                        </div>
+                      </div>
+                      <div className="bg-slate-800/70 backdrop-blur border border-slate-700/50 rounded-xl p-3 hover:border-red-500/50 transition-all">
+                        <div className="text-xs text-slate-400 mb-1">Risk Level</div>
+                        <div className="flex items-end justify-between">
+                          <div className="text-2xl font-bold text-red-500">High</div>
+                          <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>
+                        </div>
+                      </div>
+                    </div>
+                    {/* Chat Panel */}
+                    <div className="flex-1 bg-slate-800/70 backdrop-blur border border-slate-700/50 rounded-xl p-3 flex flex-col">
+                      <div className="flex items-center gap-2 mb-3 pb-2 border-b border-slate-700/50">
+                        <div className="w-6 h-6 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center">
+                          <FaRobot className="text-xs" />
+                        </div>
+                        <div className="text-xs font-semibold">AI Assistant</div>
+                        <div className="ml-auto w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                      </div>
+                      <div className="flex-1 space-y-2 overflow-hidden">
+                        <div className="flex gap-2">
+                          <div className="w-6 h-6 rounded-full bg-slate-700 flex items-center justify-center flex-shrink-0">
+                            <span className="text-xs">🤔</span>
+                          </div>
+                          <div className="bg-slate-700/70 rounded-lg px-3 py-2 text-xs text-slate-300 max-w-[80%]">
+                            What to do in a flood?
+                          </div>
+                        </div>
+                        <div className="flex gap-2 justify-end">
+                          <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-lg px-3 py-2 text-xs text-white max-w-[80%]">
+                            Move to higher ground, avoid floodwaters.
+                          </div>
+                          <div className="w-6 h-6 rounded-full bg-cyan-600 flex items-center justify-center flex-shrink-0">
+                            <FaRobot className="text-xs" />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="mt-2">
+                        <div className="bg-slate-900/70 rounded-lg px-3 py-2 text-xs text-slate-500">
+                          Ask about emergencies...
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
+                {/* Subtle Glow Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-red-500/5 via-transparent to-cyan-500/5 pointer-events-none"></div>
               </div>
             </motion.div>
           </div>
@@ -166,7 +257,7 @@ export default function LandingPage() {
               { step: 1, title: "User Input", description: "Ask question or upload image", icon: FaRobot },
               { step: 2, title: "Knowledge Retrieval", description: "FAISS retrieves disaster knowledge", icon: FaDatabase },
               { step: 3, title: "AI Analysis", description: "Gemini AI analyzes context", icon: FaBrain },
-              { step: 4, title: "Response", description: "Sentinel AI returns emergency guidance", icon: FaShieldAlt },
+              { step: 4, title: "Response", description: "DisasterSense AI returns emergency guidance", icon: FaShieldAlt },
             ].map((item, idx) => (
               <motion.div
                 key={idx}
@@ -222,7 +313,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Why Sentinel AI Section */}
+      {/* Why DisasterSense AI Section */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -231,7 +322,7 @@ export default function LandingPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold mb-4">Why Sentinel AI?</h2>
+            <h2 className="text-4xl font-bold mb-4">Why DisasterSense AI?</h2>
             <p className="text-slate-400 text-lg max-w-2xl mx-auto">See how we compare to traditional solutions.</p>
           </motion.div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -257,7 +348,7 @@ export default function LandingPage() {
               </ul>
             </div>
             <div className="bg-gradient-to-br from-red-600/20 to-cyan-500/20 border border-red-500/30 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-6">Sentinel AI</h3>
+              <h3 className="text-2xl font-bold mb-6">DisasterSense AI</h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <span className="text-cyan-500 mt-1">✓</span>
@@ -290,32 +381,17 @@ export default function LandingPage() {
                 <div className="w-10 h-10 rounded-lg bg-red-600 flex items-center justify-center">
                   <FaShieldAlt className="text-white" />
                 </div>
-                <span className="text-xl font-bold">Sentinel AI</span>
+                <span className="text-xl font-bold">DisasterSense AI</span>
               </div>
               <p className="text-slate-400 mb-4 max-w-md">
                 AI-powered disaster response platform designed for emergency preparedness and life-saving assistance.
               </p>
             </div>
-            <div>
-              <h4 className="font-semibold mb-4">Links</h4>
-              <ul className="space-y-2 text-slate-400">
-                <li><a href="#features" className="hover:text-white transition-colors">Features</a></li>
-                <li><a href="#tech" className="hover:text-white transition-colors">Tech Stack</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Documentation</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">GitHub</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
-              <ul className="space-y-2 text-slate-400 flex items-center gap-2">
-                <FaPhone />
-                <li>Emergency Support</li>
-              </ul>
-            </div>
+            
+            
           </div>
           <div className="border-t border-slate-800 pt-8 text-center text-slate-500 text-sm">
-            <p>© 2025 Sentinel AI. All rights reserved.</p>
+            <p>© 2025 DisasterSense AI. All rights reserved.</p>
           </div>
         </div>
       </footer>

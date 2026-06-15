@@ -37,7 +37,7 @@ export default function EmergencyAssistant() {
   const [messages, setMessages] = useState<Message[]>([
     {
       sender: "bot",
-      text: "👋 Hello! I am Sentinel AI Emergency Assistant.\n\nUpload an image or ask me anything about disasters, first aid, evacuation or emergency preparedness.",
+      text: "👋 Hello! I am DisasterSense AI Emergency Assistant.\n\nUpload an image or ask me anything about disasters, first aid, evacuation or emergency preparedness.",
       timestamp: new Date(),
     },
   ]);
@@ -79,7 +79,7 @@ export default function EmergencyAssistant() {
       console.log(error);
       const errorMessage: Message = {
         sender: "bot",
-        text: JSON.stringify(error?.response?.data) || "❌ Failed to contact Sentinel AI.",
+        text: JSON.stringify(error?.response?.data) || "❌ Failed to contact DisasterSense AI.",
         timestamp: new Date(),
       };
       setMessages((prev) => [...prev, errorMessage]);
@@ -168,7 +168,7 @@ export default function EmergencyAssistant() {
                   </div>
                   <div className="bg-[#0B1D33] border border-slate-800 rounded-2xl rounded-tl-sm p-4 flex items-center gap-2">
                     <FaSpinner className="animate-spin text-cyan-500" />
-                    <span className="text-slate-400">Sentinel AI is analyzing...</span>
+                    <span className="text-slate-400">DisasterSense AI is analyzing...</span>
                   </div>
                 </motion.div>
               )}
