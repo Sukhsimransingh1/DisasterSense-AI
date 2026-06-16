@@ -4,7 +4,6 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import {
   FaExclamationTriangle,
   FaFire,
-  FaUser,
   FaExclamationCircle,
   FaChartBar
 } from "react-icons/fa";
