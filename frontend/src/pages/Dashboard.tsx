@@ -85,12 +85,7 @@ export default function Dashboard() {
               icon={FaFire}
               color="text-red-500"
             />
-            <StatCard
-              title="Users"
-              value="247"
-              icon={FaUser}
-              color="text-cyan-500"
-            />
+            
             <StatCard
               title="High Risk Areas"
               value={highSeverityCount}
