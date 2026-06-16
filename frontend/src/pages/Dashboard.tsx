@@ -4,6 +4,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import {
   FaExclamationTriangle,
   FaFire,
+  FaUser,
   FaExclamationCircle,
   FaChartBar
 } from "react-icons/fa";
@@ -84,7 +85,12 @@ export default function Dashboard() {
               icon={FaFire}
               color="text-red-500"
             />
-            
+            <StatCard
+              title="Users"
+              value="10"
+              icon={FaUser}
+              color="text-cyan-500"
+            />
             <StatCard
               title="High Risk Areas"
               value={highSeverityCount}
